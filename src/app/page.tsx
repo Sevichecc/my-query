@@ -28,7 +28,7 @@ export default function Home() {
 
   const handleSearch = () => {
     if (searchQuery.trim()) {
-      router.push("/result");
+      router.push("/q");
     }
   };
 

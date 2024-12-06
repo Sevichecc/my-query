@@ -40,28 +40,28 @@ export default function ResultPage() {
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-3xl font-bold mb-6">Search Results</h1>
-      <Tabs defaultValue="all">
-        <TabsList>
-          <TabsTrigger value="all">All</TabsTrigger>
-          <TabsTrigger value="miniflux">Miniflux</TabsTrigger>
-          <TabsTrigger value="mastodon">Mastodon</TabsTrigger>
-        </TabsList>
-        <TabsContent value="all">
-          <CardContent className="p-0">
-            {renderSearchRecords("All")}
-          </CardContent>
-        </TabsContent>
-        <TabsContent value="miniflux">
-          <CardContent className="p-0">
-            {renderSearchRecords("Miniflux")}
-          </CardContent>
-        </TabsContent>
-        <TabsContent value="mastodon">
-          <CardContent className="p-0">
-            {renderSearchRecords("Mastodon")}
-          </CardContent>
-        </TabsContent>
-      </Tabs>
-    </div>
+      <Tabs defaultValue="all" className="w-full">
+      <TabsList>
+        <TabsTrigger value="all">All</TabsTrigger>
+        <TabsTrigger value="miniflux">Miniflux</TabsTrigger>
+        <TabsTrigger value="mastodon">Mastodon</TabsTrigger>
+      </TabsList>
+      <TabsContent value="all">
+        <CardContent className="p-0">
+          {renderSearchRecords("All")}
+        </CardContent>
+      </TabsContent>
+      <TabsContent value="miniflux">
+        <CardContent className="p-0">
+          {renderSearchRecords("Miniflux")}
+        </CardContent>
+      </TabsContent>
+      <TabsContent value="mastodon">
+        <CardContent className="p-0">
+          {renderSearchRecords("Mastodon")}
+        </CardContent>
+      </TabsContent>
+    </Tabs>
+    </div >
   );
 }
